@@ -11,7 +11,7 @@ public class Aulaex3 {
         }else{
         System.out.printf("O numero %d é impar ", numero);
         }
-
+        teclado.close();
     }
 }
 
