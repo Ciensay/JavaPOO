@@ -1,23 +1,3 @@
-import java.util.Scanner;
-
-public class Aulaex4 {
-    public static final int real = 100;
-    public static void main(String[] args) {
-        int[] moedas = new int[5];
-        Scanner teclado = new Scanner(System.in);
-        for(int i = 0; i<6; i++){
-        System.out.print("Digite uma moeda");
-        moedas[i] = teclado.nextInt();
-        }
-        teclado.close();
-    }
-}
-
-
-
-
-Alterinativa:
-
 
 import java.util.Scanner;
 
@@ -30,6 +10,7 @@ public class ex4 {
 
         int[] quantia = new int[6];
         int[] moedas = {100, 50, 25, 10, 5, 1};
+        String[] nomes = {"1 real", "50 centavos", "25 centavos", "10 centavos", "5 centavos", "1 centavo"};
     
         for(int i = 0; i < 6; i++){
             if(valor >= moedas[i]){
@@ -39,7 +20,10 @@ public class ex4 {
         }
 
         for(int i = 0; i < 6; i++){
-            System.out.println(quantia[i]);
+            if(quantia[i] > 0){
+                System.out.println(quantia[i] + " moeda(s) de " + nomes[i]);
+            }
         }
+        scanner.close();
     }
 }
